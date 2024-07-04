@@ -19,11 +19,9 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def Is_Prime(number):
-    If number <= 1:
-       return False
-    For i in range (2, int(nunber**0.5)+1):
-       if number % i == 0:
+def Is_Prime(n):
+       For i in range (2, int(n**0.5)+1):
+       if n % i == 0:
            return False
        return True
 
