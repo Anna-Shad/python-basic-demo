@@ -22,7 +22,7 @@ PRIME = "prime"
 def Is_Prime(number):
     If number <= 1:
        return False
-    For i in range (2, int(n**0.5)+1):
+    For i in range (2, int(nunber**0.5)+1):
        if number % 1 == 0:
            return False
        return True
