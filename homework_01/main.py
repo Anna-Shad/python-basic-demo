@@ -20,10 +20,12 @@ PRIME = "prime"
 
 
 def Is_Prime(n):
-    d = 2
-    while n % d != 0:
-        d += 1
-    return d == n
+    If n<=1:
+       return False
+    For i in range (2, int(n**0.5)+1):
+       if n%1==0:
+           return False
+       return True
 
 def filter_numbers(number_list, filter_type):
     """
@@ -46,4 +48,4 @@ def filter_numbers(number_list, filter_type):
         return [number for number in number_list if number %2 == 0]
 
     if filter_type == PRIME:
-        return [Is_Prime(number) for number in number_list]
+        return [number for number in number_list if Is_Prime(number) = True]
