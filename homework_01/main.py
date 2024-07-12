@@ -19,11 +19,15 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def Is_Prime(n):
-       For i in range (2, int(n**0.5)+1):
+def is_prime(n):
+    if n == 2 or n == 3:
+        return True
+    if n < 2 or n % 2 == 0 or n % 3 == 0:
+        return False
+    for i in range(3, int(n**0.5)+1, 2):
        if n % i == 0:
            return False
-       return True
+    return True
 
 def filter_numbers(number_list, filter_type):
     """
@@ -46,4 +50,4 @@ def filter_numbers(number_list, filter_type):
         return [number for number in number_list if number %2 == 0]
 
     if filter_type == PRIME:
-        return [number for number in number_list if Is_Prime(number) = True]
+        return [number for number in number_list if is_prime(number)]
